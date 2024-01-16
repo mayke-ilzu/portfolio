@@ -11,7 +11,7 @@ from prophet import Prophet
 from matplotlib import dates
 
 #carrega dados de prod
-file = 'C:\\Users\\mayke\\Documents\\Cursos\\Fiap\\fiap\\tech-challenge\\fase-4\\ipea\\prod_data\\oil_price_hist.csv'
+file = 'https://raw.githubusercontent.com/mayke-ilzu/portfolio/20eb0a93b4b6a5770b21ac6b7e5b1e554b3ff4e1/time-series/prod_data/oil_price_hist.csv'
 oil = pd.read_csv(file,parse_dates=['ds'],names=['ds','y'],header=None,skiprows=1)
 
 #setando estilo do gráfico
@@ -66,7 +66,7 @@ if st.button('Enviar'):
     future_dates = pd.DataFrame(future_dates,columns=['ds'])
 
     #carregando modelo
-    model = joblib.load('C:\\Users\\mayke\\Documents\\Cursos\\Fiap\\fiap\\tech-challenge\\fase-4\\ipea\\prophet_time_series.joblib')
+    model = joblib.load('prophet_time_series.joblib')
 
     #realizando previsão
     forecast = model.predict(future_dates)
