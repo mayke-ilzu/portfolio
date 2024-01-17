@@ -66,7 +66,7 @@ if st.button('Enviar'):
     future_dates = pd.DataFrame(future_dates,columns=['ds'])
 
     #carregando modelo
-    model = joblib.load('https://github.com/mayke-ilzu/portfolio/blob/6164458ecce1b59ddc8200efddd82e05caaea9f1/time-series/modelo/prophet_time_series.joblib')
+    model = joblib.load('modelo/prophet_time_series.joblib')
 
     #realizando previsão
     forecast = model.predict(future_dates)
