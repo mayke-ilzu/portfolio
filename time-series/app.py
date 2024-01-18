@@ -11,7 +11,8 @@ from prophet import Prophet
 from matplotlib import dates
 
 #carrega dados de prod
-file = 'https://raw.githubusercontent.com/mayke-ilzu/portfolio/20eb0a93b4b6a5770b21ac6b7e5b1e554b3ff4e1/time-series/prod_data/oil_price_hist.csv'
+#file = 'https://raw.githubusercontent.com/mayke-ilzu/portfolio/20eb0a93b4b6a5770b21ac6b7e5b1e554b3ff4e1/time-series/prod_data/oil_price_hist.csv'
+file = 'time-series/prod_data/oil_price_hist.csv'
 oil = pd.read_csv(file,parse_dates=['ds'],names=['ds','y'],header=None,skiprows=1)
 
 #setando estilo do gráfico
